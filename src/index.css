@@ -1,0 +1,56 @@
+/* Basic CSS for layout and styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.business-list {
+  font-family: "Apercu MonoPro Light";
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 20px;
+}
+
+.business-icon {
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 100px;
+}
+
+.business-card {
+  border: none;
+  display: flex;
+  border-radius: 5px;
+  padding: 15px;
+  /* margin: 10px; */
+  width: 180px;
+  flex-direction: column;
+  align-items: center;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+}
+
+.business-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.business-card h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.business-card p {
+  font-size: 14px;
+}
