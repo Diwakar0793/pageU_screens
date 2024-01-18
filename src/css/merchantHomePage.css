@@ -52,6 +52,24 @@
   position: relative;
   width: 100%;
   height: 60px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+@media only screen and (max-width: 450px) {
+  .rightSide {
+    height: 100vh;
+    background-color: black;
+  }
+}
+
+.rightSide .header {
+  position: relative;
+  width: 100%;
+  height: 60px;
   background: rgb(30, 30, 30);
   display: flex;
   justify-content: space-between;

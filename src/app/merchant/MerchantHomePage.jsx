@@ -1,7 +1,12 @@
-import React from "react";
+import * as React from "react";
 import "../../css/merchantHomePage.css";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import dummyDp from "./download.png";
-export default function merchantHomePage() {
+import { useNavigation } from "../utils/useNavigation";
+export default function MerchantHomePage() {
+  const [, navigateToPath] = useNavigation();
+
+  const matches = useMediaQuery("(min-width:450px)");
   return (
     <div className="container">
       <div className="leftSide">
@@ -9,14 +14,8 @@ export default function merchantHomePage() {
           <div className="userimg">
             <img src={dummyDp} alt="" className="cover" />
           </div>
-          <div className="text-white">PAGEU</div>
+          <div>PAGEU</div>
           <ul className="nav_icons">
-            <li>
-              <ion-icon name="scan-circle-outline"></ion-icon>
-            </li>
-            <li>
-              <ion-icon name="chatbox"></ion-icon>
-            </li>
             <li>
               <ion-icon name="ellipsis-vertical"></ion-icon>
             </li>
@@ -29,13 +28,16 @@ export default function merchantHomePage() {
           </div>
         </div>
         <div className="chatlist">
-          <div className="block ">
+          <div
+            className="block "
+            onClick={!matches ? () => navigateToPath("/cardsListPage") : null}
+          >
             <div className="imgBox">
               <img src={dummyDp} className="cover" alt="" />
             </div>
             <div className="details">
               <div className="listHead">
-                <h4>JOHN DOE..</h4>
+                <h4>JOHN DOE</h4>
                 <p className="time">10:56</p>
               </div>
               <div className="message_p">
@@ -203,105 +205,50 @@ export default function merchantHomePage() {
           </div>
         </div>
       </div>
-      <div class="rightSide">
-        <div class="header">
-          <div class="imgText">
-            <div class="userimg">
-              <img src={dummyDp} alt="" class="cover" />
+      {matches && (
+        <div className="rightSide">
+          <div className="header">
+            <div className="imgText">
+              <div className="userimg">
+                <img src={dummyDp} alt="" className="cover" />
+              </div>
+              <h4>
+                <span>JOHN DOE </span>
+                <br />
+                <span>online</span>
+              </h4>
             </div>
-            <h4>
-              <span>JOHN DOE </span>
-              <br />
-              <span>online</span>
-            </h4>
+            <ul className="nav_icons">
+              <li>
+                <ion-icon name="search-outline"></ion-icon>
+              </li>
+              <li>
+                <ion-icon name="ellipsis-vertical"></ion-icon>
+              </li>
+            </ul>
           </div>
-          <ul class="nav_icons">
-            <li>
-              <ion-icon name="search-outline"></ion-icon>
-            </li>
-            <li>
-              <ion-icon name="ellipsis-vertical"></ion-icon>
-            </li>
-          </ul>
-        </div>
 
-        {/* <div class="chatbox">
-          <div class="message my_msg">
-            <p>
-              INNOVA <br />
-              <span>12:18</span>
-            </p>
-          </div>
-          <div class="message friend_msg">
-            <p>
-              FORTUNER <br />
-              <span>12:18</span>
-            </p>
-          </div>
-          <div class="message my_msg">
-            <p>
-              GLANZA <br />
-              <span>12:15</span>
-            </p>
-          </div>
-          <div class="message friend_msg">
-            <p>
-              HILUX <br />
-              <span>12:15</span>
-            </p>
-          </div>
-          <div class="message my_msg">
-            <p>
-              VELLFIRE
-              <br />
-              <span>12:15</span>
-            </p>
-          </div>
-          <div class="message friend_msg">
-            <p>
-              CAMRY <br />
-              <span>12:15</span>
-            </p>
-          </div>
-          <div class="message my_msg">
-            <p>
-              URBAN CRUISER <br />
-              <span>12:15</span>
-            </p>
-          </div>
-        </div> */}
-
-        {/* <div className="cards-container">
-          <div className="cards-parent">
-            <div className="card">
-              <div className="card-box">
-                <div className="card-text-parent">
-                  <p className="card-text">check</p>
+          <div>
+            <div className="lanes">
+              <div className="swim-lane" id="todo-lane">
+                {/* <h3 className="heading">TODO</h3> */}
+                <div>
+                  <p className="task">Get groceries</p>
+                </div>
+                <div>
+                  <p className="task">Get groceries</p>
+                </div>
+                <div>
+                  <p className="task">Get groceries</p>
+                </div>
+                <div>
+                  <p className="task">Get groceries</p>
                 </div>
               </div>
             </div>
           </div>
-        </div> */}
-        <div>
-          <div className="lanes">
-            <div className="swim-lane" id="todo-lane">
-              {/* <h3 className="heading">TODO</h3> */}
-              <div>
-                <p className="task">Get groceries</p>
-              </div>
-              <div>
-                <p className="task">Get groceries</p>
-              </div>
-              <div>
-                <p className="task">Get groceries</p>
-              </div>
-              <div>
-                <p className="task">Get groceries</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
