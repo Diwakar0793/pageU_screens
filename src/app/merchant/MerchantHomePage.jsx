@@ -35,7 +35,7 @@ export default function merchantHomePage() {
             </div>
             <div className="details">
               <div className="listHead">
-                <h4>JOHN DOE</h4>
+                <h4>JOHN DOE..</h4>
                 <p className="time">10:56</p>
               </div>
               <div className="message_p">

@@ -19,7 +19,7 @@ const ConsumerHomePage = () => {
 
   return (
     <div>
-      <h1 className="bg-gray-400 m-auto text-center text-[50px]">PAGEU</h1>
+      <h1 className="bg-gray-400 m-auto text-center text-[50px]">PAGEU.</h1>
       <SearchBar onSearch={handleSearch} />
       {/* Display search results */}
       <ul>
