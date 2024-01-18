@@ -4,6 +4,7 @@ export enum ENVIRONMENTS {
   }
   
   export default {
+    
     ENV: process.env.mode === "prod" ? ENVIRONMENTS.prod : ENVIRONMENTS.dev,
     PORT: process.env.mode === "prod" ? 3010 : 3010,
   };
