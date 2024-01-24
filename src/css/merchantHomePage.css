@@ -79,6 +79,7 @@
 
 .userimg {
   position: relative;
+  margin-right: -6px;
   width: 40px;
   height: 40px;
   overflow: hidden;
@@ -224,7 +225,8 @@
   align-items: center;
 }
 
-.message_p b {
+.message_p b,
+.swim-lane b {
   background: #06d755;
   color: #fff;
   min-width: 20px;
@@ -265,15 +267,6 @@
 }
 
 /* CHAT BOX */
-.chatbox {
-  position: relative;
-  width: 100%;
-  background-color: rgb(18 18 18);
-  height: calc(100% - 60px);
-  padding: 50px;
-  overflow-y: auto;
-}
-
 .message {
   position: relative;
   display: flex;
@@ -284,16 +277,16 @@
 .message p {
   position: relative;
   right: 0;
-  text-align: center;
-  /* max-width: 65%; */
-  width: 500px;
+  /* text-align: right; */
+  max-width: 55%;
+  /* width: 500px; */
   padding: 12px;
   background: #dcf8c8;
   border-radius: 10px;
   font-size: 0.9em;
 }
 
-/* .message p::before {
+.message p::before {
   content: "";
   position: absolute;
   top: 0;
@@ -307,28 +300,29 @@
     transparent 50%,
     transparent
   );
-} */
+}
 
 .message p span {
   display: block;
   margin-top: 5px;
+  text-align: right;
   font-size: 0.85em;
   opacity: 0.5;
 }
 
 .my_msg {
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .friend_msg {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .friend_msg p {
   background: #dcf8c8;
   text-align: center;
 }
-/* 
+
 .message.friend_msg p::before {
   content: "";
   position: absolute;
@@ -338,12 +332,12 @@
   height: 20px;
   background: linear-gradient(
     225deg,
-    #fff 0%,
-    #fff 50%,
+    #dcf8c6 0%,
+    #dcf8c6 50%,
     transparent 50%,
     transparent
   );
-} */
+}
 
 .chat_input {
   position: relative;
@@ -452,21 +446,87 @@
 }
 
 .task {
-  background-color: white;
   color: black;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-
-  padding: 12px;
-  border-radius: 14px;
-  width: 300px;
-
   font-size: 16px;
-  /* cursor: move; */
 }
 
-.is-dragging {
-  scale: 1.05;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
-  background-color: rgb(50, 50, 50);
-  color: white;
+.taskHead {
+  background-color: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+  border-radius: 10px;
+}
+.taskParent {
+  display: flex;
+  /* background-color: white; */
+  justify-content: space-between;
+  align-items: center;
+  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15); */
+  padding: 12px;
+  border-radius: 10px;
+  width: 300px;
+  font-size: 16px;
+}
+
+.taskBottom {
+  padding-left: 12px;
+  padding-right: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskMembersIcons {
+  display: flex;
+}
+
+.attachmentIcon {
+  position: relative;
+  top: 10px;
+}
+
+.additionalMemberIcon {
+  margin-top: 7px;
+  margin-left: 7px;
+}
+
+.attachmentParent {
+  display: flex;
+}
+
+.attachmentNumber {
+  margin-top: 9px;
+  margin-left: 3px;
+}
+.rightSide.cardDetailedView {
+  position: relative;
+  flex: 70%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.chatbox::-webkit-scrollbar {
+  display: none;
+}
+
+.bottomRow {
+  background-color: rgb(30, 30, 30);
+  color: rgb(162, 243, 181);
+  display: flex;
+  height: 60px;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+.bottomIcons {
+  height: 40px !important;
+  width: 40px !important;
+}
+
+.chatbox {
+  position: relative;
+  width: 100%;
+  background-color: rgb(18 18 18);
+  height: 80vh;
+  padding: 50px;
+  overflow-y: auto;
 }

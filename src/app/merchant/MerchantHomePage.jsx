@@ -3,6 +3,7 @@ import "../../css/merchantHomePage.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import dummyDp from "./download.png";
 import { useNavigation } from "../utils/useNavigation";
+import AttachmentIcon from "@mui/icons-material/Attachment";
 export default function MerchantHomePage() {
   const [, navigateToPath] = useNavigation();
 
@@ -231,18 +232,112 @@ export default function MerchantHomePage() {
           <div>
             <div className="lanes">
               <div className="swim-lane" id="todo-lane">
-                {/* <h3 className="heading">TODO</h3> */}
-                <div>
-                  <p className="task">Get groceries</p>
+                <div
+                  className="taskHead"
+                  onClick={() => navigateToPath("/cardDetailedView")}
+                >
+                  <div className="taskParent">
+                    <p className="task">Get groceries</p>
+                    <b>1</b>
+                  </div>
+                  <div className="taskBottom">
+                    <div className="attachmentParent">
+                      <AttachmentIcon className="attachmentIcon" />
+                      <p className="attachmentNumber">3</p>
+                    </div>
+                    <div className="taskMembersIcons">
+                      <div className="userimg">
+                        <img src={dummyDp} className="cover" alt="" />
+                      </div>
+
+                      <div className="userimg">
+                        <img src={dummyDp} className="cover" alt="" />
+                      </div>
+
+                      <div className="userimg">
+                        <img src={dummyDp} className="cover" alt="" />
+                      </div>
+
+                      <div>
+                        <p className="additionalMemberIcon">+3</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p className="task">Get groceries</p>
+                <div className="taskHead">
+                  <div className="taskParent">
+                    <p className="task">Get groceries</p>
+                    <b>1</b>
+                  </div>
+                  <div className="taskBottom">
+                    <div className="attachmentParent">
+                      <AttachmentIcon className="attachmentIcon" />
+                      <p className="attachmentNumber">3</p>
+                    </div>
+                    <div className="taskMembersIcons">
+                      <div className="userimg">
+                        <img src={dummyDp} className="cover" alt="" />
+                      </div>
+
+                      <div className="userimg">
+                        <img src={dummyDp} className="cover" alt="" />
+                      </div>
+
+                      <div className="userimg">
+                        <img src={dummyDp} className="cover" alt="" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p className="task">Get groceries</p>
+                <div className="taskHead">
+                  <div className="taskParent">
+                    <p className="task">Get groceries</p>
+                    <b>1</b>
+                  </div>
+                  <div className="taskBottom">
+                    <div className="attachmentParent">
+                      <AttachmentIcon className="attachmentIcon" />
+                      <p className="attachmentNumber">3</p>
+                    </div>
+                    <div className="taskMembersIcons">
+                      <div className="userimg">
+                        <img src={dummyDp} className="cover" alt="" />
+                      </div>
+
+                      <div className="userimg">
+                        <img src={dummyDp} className="cover" alt="" />
+                      </div>
+
+                      <div className="userimg">
+                        <img src={dummyDp} className="cover" alt="" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p className="task">Get groceries</p>
+                <div className="taskHead">
+                  <div className="taskParent">
+                    <p className="task">Get groceries</p>
+                    <b>1</b>
+                  </div>
+                  <div className="taskBottom">
+                    <div className="attachmentParent">
+                      <AttachmentIcon className="attachmentIcon" />
+                      <p className="attachmentNumber">3</p>
+                    </div>
+                    <div className="taskMembersIcons">
+                      <div className="userimg">
+                        <img src={dummyDp} className="cover" alt="" />
+                      </div>
+
+                      <div className="userimg">
+                        <img src={dummyDp} className="cover" alt="" />
+                      </div>
+
+                      <div className="userimg">
+                        <img src={dummyDp} className="cover" alt="" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
