@@ -7,6 +7,23 @@ import AttachmentIcon from "@mui/icons-material/Attachment";
 export default function CardsListPage() {
   const [, navigateToPath] = useNavigation();
 
+  const checkAPI = async () => {
+    try {
+      const response = await fetch("http://localhost:3010/user/getUserRoles", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+    } catch (error) {
+      console.error("error------" + error);
+    }
+  };
+
   const matches = useMediaQuery("(min-width:450px)");
   return (
     <>
@@ -36,10 +53,7 @@ export default function CardsListPage() {
           <div>
             <div className="lanes">
               <div className="swim-lane" id="todo-lane">
-                <div
-                  className="taskHead"
-                  onClick={() => navigateToPath("/cardDetailedView")}
-                >
+                <div className="taskHead asd" onClick={() => checkAPI()}>
                   <div className="taskParent">
                     <p className="task">Get groceries</p>
                     <b>1</b>
